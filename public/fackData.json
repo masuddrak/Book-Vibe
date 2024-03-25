@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "image": "https://i.ibb.co/Cm4HHMy/1000-F-53250072-gqv-Xr-Tb-EYzk-U2wey-T03-SS3-Qc-M6w-XJb-Fq-removebg-preview.png",
+      "review": "A gripping psychological thriller that keeps you on the edge of your seat until the very end. The author masterfully weaves a tale of suspense and intrigue, with twists that will leave you stunned. The characters are deeply compelling, and the narrative is expertly paced. The Silent Patient is a must-read for fans of the genre, offering a fresh and thrilling take on the psychological thriller. Prepare to be captivated from the first page to the last.",
+      "totalPages": 336,
+      "rating": 4.5,
+      "category": "Mystery",
+      "tags": ["Suspense", "Psychological"],
+      "publisher": "Celadon Books",
+      "yearOfPublishing": 2019
+    },
+    {
+      "bookId": 2,
+      "bookName": "Educated",
+      "author": "Tara Westover",
+      "image": "https://i.ibb.co/CmZCnPM/Set-Up-Shot-Marketing-Steal-Likean-Artist-interior-3-scaled-e1645126811839-600x470-removebg-preview.png",
+      "review": "Educated is a powerful memoir that delves deep into the human spirit and the pursuit of knowledge. Tara Westover's journey from her survivalist upbringing to academia is both harrowing and inspiring. The writing is raw and honest, pulling readers into her world with vivid clarity. Through her experiences, Westover explores themes of family, identity, and the power of education to transform lives. This book will linger in your thoughts long after you've turned the final page, leaving you with a newfound appreciation for the resilience of the human spirit.",
+      "totalPages": 352,
+      "rating": 4.7,
+      "category": "Biography",
+      "tags": ["Memoir", "Inspiring"],
+      "publisher": "Random House",
+      "yearOfPublishing": 2018
+    },
+    {
+      "bookId": 3,
+      "bookName": "The Night Circus",
+      "author": "Erin Morgenstern",
+      "image": "https://i.ibb.co/D5JB2vv/steal-like-an-artist-by-austin-1627814361-c6dc1fdb-progressive-removebg-preview.png",
+      "review": "Step into the enchanting world of The Night Circus, where magic is real and dreams come to life. Erin Morgenstern's prose is like poetry, painting a vivid tapestry of wonder and imagination. The characters are as intricate as the circus itself, each with their own secrets and desires. As the story unfolds, you'll find yourself lost in a maze of mystery and romance, unable to put the book down. The Night Circus is a spellbinding read that will transport you to a world where anything is possible.",
+      "totalPages": 400,
+      "rating": 4.4,
+      "category": "Fantasy",
+      "tags": ["Magic", "Romance"],
+      "publisher": "Doubleday",
+      "yearOfPublishing": 2011
+    },
+    {
+      "bookId": 4,
+      "bookName": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "image": "https://i.ibb.co/Smbss57/61c-Snx-Svj-CL-AC-UF1000-1000-QL80-removebg-preview.png",
+      "review": "Sapiens is a thought-provoking journey through the history of our species, from the emergence of Homo sapiens to the present day. Yuval Noah Harari offers a sweeping narrative that challenges conventional wisdom and forces readers to question their understanding of humanity. Drawing on insights from anthropology, biology, and sociology, Harari presents a compelling argument about the forces that have shaped our collective destiny. Whether you're a history buff or just curious about the human story, Sapiens is a must-read that will leave you with a newfound appreciation for the journey of our species.",
+      "totalPages": 464,
+      "rating": 4.6,
+      "category": "History",
+      "tags": ["Evolution", "Anthropology"],
+      "publisher": "Harper",
+      "yearOfPublishing": 2014
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/s6BJHzz/1-Wvilp-CORSLKIx-Kbs-Aep-7-Q-removebg-preview.png",
+      "review": "The Great Gatsby is a timeless masterpiece that captures the essence of the Jazz Age with unparalleled elegance. F. Scott Fitzgerald's prose is like music, evoking the glamour and tragedy of the era with every word. Through the eyes of Nick Carraway, we are drawn into the world of Jay Gatsby, a mysterious figure who embodies the American Dream. As the story unfolds, themes of love, wealth, and ambition intertwine, culminating in a tragic denouement that lingers long after the final page. The Great Gatsby is more than just a novel; it's a work of art that continues to resonate with readers across generations.",
+      "totalPages": 180,
+      "rating": 4.2,
+      "category": "Fiction",
+      "tags": ["Classic", "Romance"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 6,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/Bw243gs/pngwing-1-removebg-preview.png",
+      "review": "George Orwell's 1984 is a chilling portrayal of a dystopian society where freedom is a luxury and truth is a commodity. Through the eyes of Winston Smith, we are thrust into a world of oppression and surveillance, where Big Brother reigns supreme. Orwell's vision of the future is hauntingly prescient, with echoes of totalitarian regimes past and present. As Winston struggles to maintain his humanity in the face of tyranny, readers are forced to confront uncomfortable truths about power and control. 1984 is a warning from history that remains as relevant today as it was when it was first published.",
+      "totalPages": 328,
+      "rating": 4.8,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    }
+]
+   
