@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveLocalReadItem } from "../uitlity/utility";
 
 const BookDetails = () => {
     const detailsBookID = useParams()
@@ -14,8 +15,9 @@ const BookDetails = () => {
         publisher,
         yearOfPublishing,
         rating } = detailsBook
-    console.log(detailsBook)
-
+    const handelReadItem = (detailsBook) => {
+        saveLocalReadItem(detailsBook)
+    }
     return (
         <div className="w-full mt-10 grid grid-cols-2 gap-10 justify-between">
             <div className="flex-shrink-0 w-full h-full mb-6 bg-base-200 rounded-md">
@@ -61,7 +63,7 @@ const BookDetails = () => {
                         </div>
                     </div>
                     <div className="flex gap-5 mt-5">
-                        <button className="btn btn-outline">Read</button>
+                        <button onClick={() => handelReadItem(detailsBook)} className="btn btn-outline">Read</button>
                         <button className="btn btn-active btn-accent">Wishlist</button>
                     </div>
                 </div>
