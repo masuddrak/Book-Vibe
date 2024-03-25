@@ -9,6 +9,7 @@ import Layout from './Layout/Layout';
 import Home from './Page/Home';
 import ListedBook from './Page/ListedBook';
 import PagesToRead from './Page/PagesToRead';
+import BookDetails from './components/BookDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path:'/pagesToRead',
         element:<PagesToRead></PagesToRead>
+      },
+      {
+        path:'/bookDetails/:boodID',
+        element:<BookDetails></BookDetails>,
+        loader:()=>fetch('fackData.json')
       },
     ]
   },

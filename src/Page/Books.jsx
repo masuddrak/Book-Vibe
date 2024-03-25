@@ -8,7 +8,7 @@ const Books = () => {
         .then(res=>res.json())
         .then(data=>setBooks(data))
     },[])
-    console.log(books)
+    // console.log(books)
     return (
         <div>
             <h2 className="text-3xl font-bold text-center my-10">Books</h2>

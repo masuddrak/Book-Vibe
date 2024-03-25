@@ -1,15 +1,15 @@
 import { IoMdStarOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 const Book = ({ book }) => {
-    const { tags, image,
+    const {bookId ,tags, image,
         bookName,
         author,
         category,
         rating } = book
 
     return (
-        <Link className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 rounded-lg border">
+        <Link to={`/bookDetails/${bookId}`} className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 rounded-lg border">
             <div className="space-y-4">
                 <div className="space-y-2 bg-base-200  flex justify-center rounded-lg">
                     <div className="m-5 w-[300px] h-[200px] text-center">
@@ -39,5 +39,7 @@ const Book = ({ book }) => {
         </Link>
     );
 };
-
+Book.propTypes = {
+    book: PropTypes.object,
+}
 export default Book;
