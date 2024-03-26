@@ -4,49 +4,49 @@ import 'react-tabs/style/react-tabs.css';
 import { getLocalReadItems, getLocalWislistItems } from "../uitlity/utility";
 import ReadBookCard from "../components/ReadBookCard";
 import WishListCard from "../components/WishListCard";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 const ListedBook = () => {
     const [tabIndex, setTabIndex] = useState(0);
-    // read data
-    const [readItems,setReaditems] = useState(getLocalReadItems())
 
-    const books=getLocalReadItems()
-    const [desendingData,setDesendingData]=useState(getLocalReadItems())
-    useEffect(()=>{
-        const loadReadData=getLocalReadItems()
+    const books = getLocalReadItems()
+    const [desendingData, setDesendingData] = useState(books)
+    useEffect(() => {
+        const loadReadData = getLocalReadItems()
         setDesendingData(loadReadData)
-    },[books])
+    }, [])
 
-    const handelShortByData=(serachData)=>{
-            if(serachData=="rating"){
-                const shortReadBooks= desendingData.sort((firstItem, secondItem) => {
-                    if(firstItem.rating < secondItem.rating){
-                        return -1;
-                    }
-                    if(firstItem.rating > secondItem.rating){
-                        return 1;
-                    }
-                
-                    return 0;
-                });
-               console.log(shortReadBooks)
-               setDesendingData(shortReadBooks)
-            }
+    const handelShortByData = (serachData) => {
+        if (serachData == "rating") {
+            const shortReadBooks = books.sort((a, b) => (b.rating) - (a.rating));
+            setDesendingData(shortReadBooks)
+        }
+        else if (serachData == "pages") {
+            const shortPages = books.sort((a, b) => (b.totalPages) - (a.totalPages))
+            setDesendingData(shortPages)
+        }
+        else if (serachData == "years") {
+            const shortYear = books.sort((a, b) => (b.yearOfPublishing) - Number(a.yearOfPublishing))
+            setDesendingData(shortYear)
+        }
     }
+
+
     // wishlist data
     const wishListItems = getLocalWislistItems()
 
-    console.log(readItems)
+    // console.log(readItems)
     return (
         <section>
             <h1 className="text-3xl font-bold text-center bg-base-200 p-6 my-10 rounded-lg">Books</h1>
             <div className="flex justify-center">
-                <details className="dropdown">
-                    <summary className="m-1 btn">open or close</summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li onClick={()=>handelShortByData("rating")}><a>Reating</a></li>
-                        <li><a>Item 2</a></li>
+                <details className="dropdown ">
+                    <summary className="m-1 bg-green-500 btn text-white">Sort By <IoIosArrowDown></IoIosArrowDown></summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-green-300 rounded-box w-52">
+                        <li onClick={() => handelShortByData("rating")}><a>Reating</a></li>
+                        <li onClick={() => handelShortByData("pages")}><a>Number of pages</a></li>
+                        <li onClick={() => handelShortByData("years")}><a>Publisher year</a></li>
                     </ul>
                 </details>
             </div>

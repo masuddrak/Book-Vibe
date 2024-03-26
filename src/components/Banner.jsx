@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import bannerImage from '../../src/assets/pngwing 1.png'
 const Banner = () => {
     return (
@@ -6,7 +7,7 @@ const Banner = () => {
                 <img src={bannerImage} className="max-w-sm rounded-lg " />
                 <div className="space-y-10">
                     <h1 className="text-5xl font-bold">Books to freshen up your bookshelf</h1>
-                    <button className="btn bg-green-500 text-xl text-white">View The List</button>
+                    <Link to='/listedBook' className="btn bg-green-500 text-xl text-white">View The List</Link>
                 </div>
             </div>
         </div>
