@@ -6,6 +6,7 @@ const Header = () => {
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/listedBook'>Listed Book</NavLink>
         <NavLink to='/pagesToRead'>Pages To Read</NavLink>
+        <NavLink to='/reviews'>Reviews</NavLink>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -26,7 +27,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-                <a className="btn bg-green-500 text-white">Sign in</a>
+                <a className="btn bg-green-500  text-white">Sign in</a>
                 <a className="btn btn-accent">Sign up</a>
             </div>
         </div>

@@ -9,7 +9,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const ListedBook = () => {
     const [tabIndex, setTabIndex] = useState(0);
-
+    // short read items
     const books = getLocalReadItems()
     const [desendingData, setDesendingData] = useState(books)
     useEffect(() => {
@@ -27,15 +27,34 @@ const ListedBook = () => {
             setDesendingData(shortPages)
         }
         else if (serachData == "years") {
-            const shortYear = books.sort((a, b) => (b.yearOfPublishing) - Number(a.yearOfPublishing))
+            const shortYear = books.sort((a, b) => (b.yearOfPublishing) - (a.yearOfPublishing))
             setDesendingData(shortYear)
         }
     }
 
 
-    // wishlist data
+    //short wishlist data
     const wishListItems = getLocalWislistItems()
+    const [wishList, setWislist] = useState(wishListItems)
+    useEffect(() => {
+        const loadWislistData = getLocalWislistItems()
+        setWislist(loadWislistData)
+    }, [])
 
+    const handelShortByDataWishlist = (serachData) => {
+        if (serachData == "rating") {
+            const shortWishlistBooks = wishList.sort((a, b) => (b.rating) - (a.rating));
+            setWislist(shortWishlistBooks)
+        }
+        else if (serachData == "pages") {
+            const shortWishlistPages = wishList.sort((a, b) => (b.totalPages) - (a.totalPages))
+            setWislist(shortWishlistPages)
+        }
+        else if (serachData == "years") {
+            const shortWishlistYear = wishList.sort((a, b) => (b.yearOfPublishing) - (a.yearOfPublishing))
+            setWislist(shortWishlistYear)
+        }
+    }
     // console.log(readItems)
     return (
         <section>
@@ -44,9 +63,9 @@ const ListedBook = () => {
                 <details className="dropdown ">
                     <summary className="m-1 bg-green-500 btn text-white">Sort By <IoIosArrowDown></IoIosArrowDown></summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-green-300 rounded-box w-52">
-                        <li onClick={() => handelShortByData("rating")}><a>Reating</a></li>
-                        <li onClick={() => handelShortByData("pages")}><a>Number of pages</a></li>
-                        <li onClick={() => handelShortByData("years")}><a>Publisher year</a></li>
+                        <li onClick={() => {handelShortByData("rating");handelShortByDataWishlist("rating")}}><a>Reating</a></li>
+                        <li onClick={() => {handelShortByData("pages");handelShortByDataWishlist("pages")} }><a>Number of pages</a></li>
+                        <li onClick={() => {handelShortByData("years");handelShortByDataWishlist("years")}}><a>Publisher year</a></li>
                     </ul>
                 </details>
             </div>
@@ -66,7 +85,7 @@ const ListedBook = () => {
                     <TabPanel>
                         <div className="mt-10">
                             {
-                                wishListItems.map(wishlistBook => <WishListCard key={wishlistBook.bookId} wishlistBook={wishlistBook}></WishListCard>)
+                                wishList.map(wishlistBook => <WishListCard key={wishlistBook.bookId} wishlistBook={wishlistBook}></WishListCard>)
                             }
                         </div>
                     </TabPanel>

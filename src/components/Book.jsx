@@ -9,11 +9,11 @@ const Book = ({ book }) => {
         rating } = book
 
     return (
-        <Link to={`/bookDetails/${bookId}`} className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 rounded-lg border">
-            <div className="space-y-4">
+        <Link to={`/bookDetails/${bookId}`} className="">
+            <div className="space-y-4 max-w-lg p-4 shadow-md  rounded-lg border mt-10 md:mt-0">
                 <div className="space-y-2 bg-base-200  flex justify-center rounded-lg">
-                    <div className="m-5 w-[300px] h-[200px] text-center">
-                        <img src={image} alt="" className="block  w-full h-full object-center  rounded-md  dark:bg-gray-500" />
+                    <div className="m-5 w-[200px] h-[100px]  md:w-[300px] md:h-[200px] text-center">
+                        <img src={image} alt="" className="block  w-full h-full object-center  rounded-md  " />
                     </div>
                 </div>
                 <div className="space-y-2">

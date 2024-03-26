@@ -10,10 +10,13 @@ import Home from './Page/Home';
 import ListedBook from './Page/ListedBook';
 import PagesToRead from './Page/PagesToRead';
 import BookDetails from './components/BookDetails';
+import Page404 from './Page/Page404';
+import Reviews from './Page/Reviews';
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Layout></Layout> ,
+    errorElement:<Page404></Page404>,
     children:[
       {
         path:'/',
@@ -30,6 +33,11 @@ const router = createBrowserRouter([
       {
         path:'/bookDetails/:boodID',
         element:<BookDetails></BookDetails>,
+        loader:()=>fetch('/fackData.json')
+      },
+      {
+        path:'/reviews',
+        element:<Reviews></Reviews>,
         loader:()=>fetch('/fackData.json')
       },
     ]

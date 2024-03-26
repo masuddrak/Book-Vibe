@@ -22,9 +22,9 @@ const BookDetails = () => {
         saveWislistLocastorag(detailsBook)
     }
     return (
-        <div className="w-full mt-10 grid grid-cols-2 gap-10 justify-between">
-            <div className="flex-shrink-0 w-full h-full mb-6 bg-base-200 rounded-md">
-                <div className="m-20">
+        <div className="w-full m-2 md:m-0 md:mt-10 lg:grid grid-cols-2 gap-10 justify-between">
+            <div className="lg:flex-shrink-0 lg:w-full lg:h-full mb-6 bg-base-200 rounded-md">
+                <div className="md:m-20 m-4">
                     <img src={image} alt="" className="object-cover object-center w-full h-full  dark:bg-gray-500" />
                 </div>
             </div>
@@ -50,7 +50,7 @@ const BookDetails = () => {
                 </div>
                 <hr className=" border-dotted border-gray-400 my-4" />
 
-                <div className="md:w-2/4">
+                <div className="md:w-2/4 ">
                     <div className="flex justify-between">
                         <div>
                             <p>Number of Pages:</p>
