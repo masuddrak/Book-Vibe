@@ -1,7 +1,7 @@
 
 const Contact = () => {
     return (
-        <section className="py-6 bg-gray-100">
+        <section className="py-6 bg-gray-100 mt-5">
             <div className="grid max-w-6xl grid-cols-1 px-6 py-10 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <div className="py-6 md:py-0 md:px-6">
                     <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -28,20 +28,20 @@ const Contact = () => {
                         </p>
                     </div>
                 </div>
-                <form novalidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                <form  className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                     <label className="block">
                         <span className="mb-1">Full name</span>
-                        <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm border-1 border-black" />
+                        <input type="text" placeholder="Leroy  Jenkins" className="block p-3 w-full rounded-md shadow-sm border-1 border-black" />
                     </label>
                     <label className="block">
                         <span className="mb-1">Email address</span>
-                        <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
+                        <input type="email" placeholder="leroy@jenkins.com" className="block p-3 w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100" />
                     </label>
                     <label className="block">
                         <span className="mb-1">Message</span>
-                        <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
+                        <textarea rows="3" className="block w-full rounded-md focus:ring p-3 focus:ring-opacity-75 focus:dark:ring-violet-600 dark:bg-gray-100"></textarea>
                     </label>
-                    <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Submit</button>
+                    <button type="button" className="self-center bg-green-500 px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-violet-600 dark:text-gray-50 focus:dark:ring-violet-600 hover:dark:ring-violet-600">Submit</button>
                 </form>
             </div>
         </section>
