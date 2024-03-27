@@ -1,12 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
-
-
+import './Header.css'
 const Header = () => {
+  
     const navbar = <>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/listedBook'>Listed Book</NavLink>
-        <NavLink to='/pagesToRead'>Pages To Read</NavLink>
-        <NavLink to='/reviews'>Reviews</NavLink>
+        <NavLink to='/' className='px-4 py-2'>Home</NavLink>
+        <NavLink to='/listedBook' className='px-4 py-1'>Listed Book</NavLink>
+        <NavLink to='/pagesToRead' className='px-4 py-1'>Pages To Read</NavLink>
+        <NavLink to='/reviews' className='px-4 py-1'>Reviews</NavLink>
     </>
     return (
         <div className="navbar bg-base-100">

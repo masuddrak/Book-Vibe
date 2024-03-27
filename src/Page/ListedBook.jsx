@@ -68,6 +68,16 @@ const ListedBook = () => {
                         <li onClick={() => {handelShortByData("years");handelShortByDataWishlist("years")}}><a>Publisher year</a></li>
                     </ul>
                 </details>
+
+
+                {/* <div>
+                    <select className="select text-white  bg-green-500">
+                        <option disabled selected className="text-xl">Sort By</option>
+                        <option onClick={() => {handelShortByData("rating");handelShortByDataWishlist("rating")}}>Reating</option>
+                        <option onClick={() => {handelShortByData("pages");handelShortByDataWishlist("pages")} }>Number of pages</option>
+                        <option onClick={() => {handelShortByData("years");handelShortByDataWishlist("years")}}>Publisher year</option>
+                    </select>
+                </div> */}
             </div>
             <article>
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
