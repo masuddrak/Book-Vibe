@@ -8,4 +8,4 @@
 <li>can book free read  </li>
 <li>can add like book add wishlist </li>
 <li>have read books show in barchat</li>
-<li>show all peple reviews in reviews page</li>
+<li>show all pepole reviews in reviews page</li>
