@@ -6,7 +6,7 @@ const Footer = () => {
     const currenPath=myCurrentPath.pathname
     console.log(currenPath)
     return (
-        <footer className={`p-10 bg-base-200 text-base-content mt-8 ${currenPath=="/listedBook"?" bottom-0 w-full":""}  ${currenPath == "/pagesToRead"?"absolute bottom-0 w-full": ""}`}>
+        <footer className={`p-10 bg-base-200 text-base-content mt-8 ${currenPath=="/listedBook"?" bottom-0 w-full":""}  ${currenPath == "/pagesToRead"?"md:absolute bottom-0 w-full": ""}`}>
             <div className="footer container mx-auto">
                 <aside>
                     <h1 className="text-3xl font-extrabold"># Book Vivo</h1>

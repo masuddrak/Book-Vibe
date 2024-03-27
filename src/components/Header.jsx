@@ -7,6 +7,7 @@ const Header = () => {
         <NavLink to='/listedBook' className='px-4 py-1'>Listed Book</NavLink>
         <NavLink to='/pagesToRead' className='px-4 py-1'>Pages To Read</NavLink>
         <NavLink to='/reviews' className='px-4 py-1'>Reviews</NavLink>
+        <NavLink to='/contact' className='px-4 py-1'>Contact</NavLink>
     </>
     return (
         <div className="navbar bg-base-100">

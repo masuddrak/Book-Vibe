@@ -12,6 +12,7 @@ import PagesToRead from './Page/PagesToRead';
 import BookDetails from './components/BookDetails';
 import Page404 from './Page/Page404';
 import Reviews from './Page/Reviews';
+import Contact from './Page/Contact';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path:'/reviews',
         element:<Reviews></Reviews>,
         loader:()=>fetch('/fackData.json')
+      },
+      {
+        path:'/contact',
+        element:<Contact></Contact>,
       },
     ]
   },

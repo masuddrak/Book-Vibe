@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { getLocalReadItems } from "../uitlity/utility";
-import { Bar, BarChart, CartesianGrid, Cell, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 const PagesToRead = () => {
     const [data, setData] = useState([])
@@ -24,29 +24,30 @@ const PagesToRead = () => {
     };
     return (
         <div className="w-full flex justify-center items-center mt-8">
-            <BarChart
-                width={800}
-                height={300}
-                data={data}
-                margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="bookName" />
-                <YAxis dataKey="totalPages" />
-                <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                    {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} />
-                    ))}
-                </Bar>
-                <Tooltip></Tooltip>
-            </BarChart>
-
-
+            <div style={{ width: '100%', height: 300 }}>
+                <ResponsiveContainer>
+                    <BarChart
+                       
+                        data={data}
+                        margin={{
+                            top: 20,
+                            right: 30,
+                            left: 20,
+                            bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="bookName" />
+                        <YAxis dataKey="totalPages" />
+                        <Bar dataKey="totalPages" fill="#23be0a" shape={<TriangleBar />} label={{ position: 'top' }}>
+                            {data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} />
+                            ))}
+                        </Bar>
+                        <Tooltip></Tooltip>
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
         </div>
     );
 };

@@ -57,7 +57,7 @@ const ListedBook = () => {
     }
     // console.log(readItems)
     return (
-        <section>
+        <section className="min-h-screen">
             <h1 className="text-3xl font-bold text-center bg-base-200 p-6 my-10 rounded-lg">Books</h1>
             <div className="flex justify-center">
                 <details className="dropdown ">
@@ -73,9 +73,9 @@ const ListedBook = () => {
                 {/* <div>
                     <select className="select text-white  bg-green-500">
                         <option disabled selected className="text-xl">Sort By</option>
-                        <option onClick={() => {handelShortByData("rating");handelShortByDataWishlist("rating")}}>Reating</option>
-                        <option onClick={() => {handelShortByData("pages");handelShortByDataWishlist("pages")} }>Number of pages</option>
-                        <option onClick={() => {handelShortByData("years");handelShortByDataWishlist("years")}}>Publisher year</option>
+                        <option onChange={() => {handelShortByData("rating");handelShortByDataWishlist("rating")}}>Reating</option>
+                        <option onChange={() => {handelShortByData("pages");handelShortByDataWishlist("pages")} }>Number of pages</option>
+                        <option onChange={() => {handelShortByData("years");handelShortByDataWishlist("years")}}>Publisher year</option>
                     </select>
                 </div> */}
             </div>
